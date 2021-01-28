@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class conexiondbms {
     private String host ="localhost";
     private String puerto = "5432";
-    private String baseDatos ="dbpais";
+    private String baseDatos ="dbpaises";
     public String servidor ="jdbc:postgresql://" + host + ":" + puerto + "/" + baseDatos;
     public String usuario = "postgres";
     public String clave = "123456";

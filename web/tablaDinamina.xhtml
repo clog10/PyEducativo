@@ -26,8 +26,6 @@
             <p:dialog id="pnlDialog" widgetVar="dlgNuevoRegistro" modal="true">
             
                 <p:panelGrid columns="2" >
-                    <h:outputLabel value="id pais"/>
-                    <p:inputText value="#{mbEstado.estadoNuevo.idpais}"></p:inputText>
                     
                     <h:outputLabel value="pais"/>
                     
@@ -36,7 +34,6 @@
                         <p:ajax event="change" listener="#{mbPais.obtenerInformacion()}"/>
                     </p:selectOneMenu>
 
-
                     <h:outputLabel value="id estado"/>
                     <p:inputText value="#{mbEstado.estadoNuevo.idestado}"></p:inputText>
                     <h:outputLabel value="estado"/>
@@ -44,9 +41,6 @@
 
                 </p:panelGrid>
                 
-                
-                
-             
                 <p:commandButton value="Guardar" icon="ui-icon-disk"
                  update="dtEstado :frmEstado:pnlDialog :frmEstado:pnlInformacion"
                  actionListener="#{mbEstado.guardarEstado()}"
