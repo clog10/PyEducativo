@@ -11,7 +11,7 @@
     <h:body>
         Listado de Estados
         <h:form id="frmEstado">
-           <p:panel header="INFORMACION" id="pnlInformacion">
+            <p:panel header="INFORMACION" id="pnlInformacion">
                 <p:messages id="msg" showDetail="true" autoUpdate="true" closable="true"/>
                 <p:commandButton id="btnNuevo" icon="ui-icon-document" 
                                  oncomplete="PF('dlgNuevoRegistro').show();"
@@ -22,13 +22,13 @@
                                  disabled="#{mbEstado.seleccion==null}"
                                  />
             </p:panel>
-            
+
             <p:dialog id="pnlDialog" widgetVar="dlgNuevoRegistro" modal="true">
-            
+
                 <p:panelGrid columns="2" >
-                    
+
                     <h:outputLabel value="pais"/>
-                    
+
                     <p:selectOneMenu value="#{mbPais.idpais}">
                         <f:selectItems value="#{mbPais.cmb1}"/>
                         <p:ajax event="change" listener="#{mbPais.obtenerInformacion()}"/>
@@ -38,19 +38,18 @@
                     <p:inputText value="#{mbEstado.estadoNuevo.idestado}"></p:inputText>
                     <h:outputLabel value="estado"/>
                     <p:inputText value="#{mbEstado.estadoNuevo.estado}"></p:inputText>
-
                 </p:panelGrid>
-                
+
                 <p:commandButton value="Guardar" icon="ui-icon-disk"
-                 update="dtEstado :frmEstado:pnlDialog :frmEstado:pnlInformacion"
-                 actionListener="#{mbEstado.guardarEstado()}"
-                 oncomplete="PF('dlgNuevoRegistro').hide()"/>
+                                 update="frmEstado"
+                                 actionListener="#{mbEstado.guardarEstado()}"
+                                 oncomplete="PF('dlgNuevoRegistro').hide()"/>
                 <p:commandButton value="Cancelar"
-                 update="dtEstado :frmEstado:pnlDialog :frmEstado:pnlInformacion"
-                 actionListener="#{mbEstado.limpiarEstado()}"
-                 oncomplete="PF('dlgNuevoRegistro').hide()"/>
+                                 update="dtEstado :frmEstado:pnlDialog :frmEstado:pnlInformacion"
+                                 actionListener="#{mbEstado.limpiarEstado()}"
+                                 oncomplete="PF('dlgNuevoRegistro').hide()"/>
             </p:dialog>
-            
+
             <p:dataTable value="#{mbEstado.lstEstadoPais}" id="dtEstado" var="tabla" 
                          selection="#{mbEstado.seleccion}"
                          selectionMode="single"
@@ -70,7 +69,7 @@
                     #{tabla.estado}
                 </p:column>
             </p:dataTable>
-                         
+
         </h:form>
     </h:body>
 </html>
