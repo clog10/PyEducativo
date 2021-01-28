@@ -36,6 +36,8 @@ public class MbEstado implements Serializable {
     private Estado estadoNuevo;
     
     public MbEstado() {
+        estadoNuevo = new Estado();
+        seleccion = new Estado();
     }
 
     public ArrayList<SelectItem> getLst() {
