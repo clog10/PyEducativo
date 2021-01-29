@@ -28,7 +28,13 @@
                 <p:panelGrid columns="2" >
 
                     <h:outputLabel value="id Estado:" />
-                    <p:inputText value="#{mbEstado.estadoNuevo.idestado}" readonly="true" disabled="true"/>
+                    <p:inputText value="#{mbEstado.estadoNuevo.idestado}" readonly="true" disabled="true"/> 
+                    <!--
+                        Se agregó un comboBox con los nombres de los estados
+                        que al seleccionar uno, cuando se de en "Guardar" al
+                        estado, automáticamente extraiga el idPais y lo agregue
+                        al insertar.
+                    -->
                     <h:outputLabel value="Nombre Pais:" />
                     <p:selectOneMenu value="#{mbEstado.estadoNuevo.idpais}">
                         <f:selectItems value="#{mbPais.cmb1}" var="selected" itemLabel="#{selected.label}" itemValue="#{selected.value}" />
@@ -56,6 +62,9 @@
                 <p:column headerText="ID PAIS">
                     #{tabla.idpais}
                 </p:column>
+                <!--
+                    Se Agregó una columna que muestra el nombre de los paises 
+                -->
                 <p:column headerText="NOMBRE PAIS">
                     #{tabla.pais}
                 </p:column>
