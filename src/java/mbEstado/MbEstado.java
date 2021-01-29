@@ -66,7 +66,7 @@ public class MbEstado implements Serializable {
     public ArrayList<Estado> getLstEstadoPais() {
         DAOEstado dao = new DAOEstado();
         if (lstEstado == null) {
-            try {
+            try { 
                 lstEstado = new ArrayList<>();
 
                 for (Estado estado : dao.dameEstadoPais2()) {

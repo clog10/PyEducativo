@@ -26,14 +26,16 @@
             <p:dialog id="pnlDialog" widgetVar="dlgNuevoRegistro" modal="true">
 
                 <p:panelGrid columns="2" >
-
-                    <h:outputLabel value="pais"/>
-
+                    
+                    <h:outputLabel value="id pais"/>
+                    <p:inputText value="#{mbEstado.estadoNuevo.idpais}"></p:inputText>
+                   
+                   <h:outputLabel value="pais"/>
                     <p:selectOneMenu value="#{mbPais.idpais}">
                         <f:selectItems value="#{mbPais.cmb1}"/>
                         <p:ajax event="change" listener="#{mbPais.obtenerInformacion()}"/>
                     </p:selectOneMenu>
-
+                   
                     <h:outputLabel value="id estado"/>
                     <p:inputText value="#{mbEstado.estadoNuevo.idestado}"></p:inputText>
                     <h:outputLabel value="estado"/>

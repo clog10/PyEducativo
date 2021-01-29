@@ -19,6 +19,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/tablaDinamina.xhtml</welcome-file>
+        <welcome-file>faces/pais.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>
