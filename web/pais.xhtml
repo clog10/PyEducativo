@@ -7,9 +7,12 @@
         <title>Buscar país</title>
     </h:head>
     <h:body>
+        Buscar Pais
         <h:form>
+            <h:outputLabel value="Ingresa el id_pais "/>
             <p:inputText value="#{mbPais.p.idpais}"/>
             <p:commandButton value="Buscar" actionListener="#{mbPais.buscarPais()}" update="txtPais" />
+            <h:outputLabel value=" pais "/>
             <p:inputText id="txtPais" value="#{mbPais.p.pais}" />       
         </h:form>
     </h:body>

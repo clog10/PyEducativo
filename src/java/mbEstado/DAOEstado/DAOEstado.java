@@ -52,7 +52,7 @@ public class DAOEstado {
         ArrayList<Estado> lst = new ArrayList<>();
         conexiondbms cn = new conexiondbms();
         Connection c = cn.conectar();
-        String sql = "select * from scpais.estado";
+        String sql = "select * from scpais.estado order by idestado asc ";
         PreparedStatement ps;
 
         try {

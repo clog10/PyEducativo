@@ -89,7 +89,6 @@ public class MbPais implements Serializable {
             System.out.println(p.getIdpais());
             Pais pais2 = dao.damePaises(p.getIdpais());
             p = pais2;
-
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
             Logger.getLogger(MbPais.class.getName()).log(Level.SEVERE, null, ex);
