@@ -7,7 +7,7 @@ package mbEstado.dominio;
 
 /**
  *
- * @author raula
+ * @author clog10
  */
 public class Estado {
     private int idpais;

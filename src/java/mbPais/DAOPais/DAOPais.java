@@ -15,13 +15,10 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 
 /**
- * @author clog10
+ *
+ * @author raula
  */
-
 public class DAOPais {
-    
-    
-    
     public ArrayList<Pais> damePaises() throws SQLException{
         ArrayList<Pais> lst = new ArrayList<>();
         conexiondbms cn = new conexiondbms();
@@ -55,33 +52,6 @@ public class DAOPais {
         }
         cn.desconectar(c);
         return pais2;
-    }
-    
-        public void guardarPais(Pais pais) throws SQLException {
-        conexiondbms c = new conexiondbms();
-        Connection cn = c.conectar();
-        PreparedStatement ps;
-        String sql = "insert into scpais.pais (idpais, pais) values (?,?)";
-        ps = cn.prepareStatement(sql);
-        ps.setInt(1, pais.getIdpais());
-        ps.setString(2, pais.getPais());
-        ps.executeUpdate();
-        c.desconectar(cn);
-    }
-
-    public void actualizarPais(Pais pais) throws SQLException {
-        conexiondbms c = new conexiondbms();
-        Connection cn = c.conectar();
-        PreparedStatement ps;
-        String sql = "update scpais.pais set pais=? where idpais=?";
-
-        ps = cn.prepareStatement(sql);
-        ps.setInt(1, pais.getIdpais());
-        ps.setString(2, pais.getPais());
-
-        ps.executeUpdate();
-        c.desconectar(cn);
-
     }
     
 }
