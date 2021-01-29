@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Objects;
 /**
  *
- * @author raula
+ * @author clog10
  */
 public class Pais implements Serializable{
     private int idpais;

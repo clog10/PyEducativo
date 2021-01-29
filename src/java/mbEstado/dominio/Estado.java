@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mbEstado.dominio;
 
 /**
@@ -10,6 +5,7 @@ package mbEstado.dominio;
  * @author clog10
  */
 public class Estado {
+
     private int idpais;
     private int idestado;
     private String estado;
@@ -25,7 +21,6 @@ public class Estado {
     public void setPais(String pais) {
         this.pais = pais;
     }
-    
 
     public int getIdpais() {
         return idpais;
@@ -78,9 +73,7 @@ public class Estado {
 
     @Override
     public String toString() {
-        return  estado ;
+        return estado;
     }
-    
-    
-    
+
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mbEstado.DAOEstado;
 
 import conexion.conexiondbms;
@@ -18,7 +13,7 @@ import java.util.logging.Level;
 
 /**
  *
- * @author raula
+ * @author clog10
  */
 public class DAOEstado {
 
@@ -79,7 +74,7 @@ public class DAOEstado {
         Connection c = cn.conectar();
         String sql = "select pais.idpais, pais.pais, estado.idestado,estado.estado\n"
                 + "from scpais.estado inner join scpais.pais\n"
-                + "on estado.idpais=pais.idpais;";
+                + "on estado.idpais=pais.idpais order by estado.idestado asc;";
         PreparedStatement ps;
 
         try {
